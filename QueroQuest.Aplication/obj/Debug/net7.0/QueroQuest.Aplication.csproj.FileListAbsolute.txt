@@ -1,0 +1,15 @@
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/bin/Debug/net7.0/QueroQuest.Aplication.deps.json
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/bin/Debug/net7.0/QueroQuest.Aplication.dll
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/bin/Debug/net7.0/QueroQuest.Aplication.pdb
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/bin/Debug/net7.0/QueroQuest.Domain.dll
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/bin/Debug/net7.0/QueroQuest.Domain.pdb
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/obj/Debug/net7.0/QueroQuest.Aplication.csproj.AssemblyReference.cache
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/obj/Debug/net7.0/QueroQuest.Aplication.GeneratedMSBuildEditorConfig.editorconfig
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/obj/Debug/net7.0/QueroQuest.Aplication.AssemblyInfoInputs.cache
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/obj/Debug/net7.0/QueroQuest.Aplication.AssemblyInfo.cs
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/obj/Debug/net7.0/QueroQuest.Aplication.csproj.CoreCompileInputs.cache
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/obj/Debug/net7.0/QueroQuest.Aplication.csproj.CopyComplete
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/obj/Debug/net7.0/QueroQuest.Aplication.dll
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/obj/Debug/net7.0/refint/QueroQuest.Aplication.dll
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/obj/Debug/net7.0/QueroQuest.Aplication.pdb
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/obj/Debug/net7.0/ref/QueroQuest.Aplication.dll
