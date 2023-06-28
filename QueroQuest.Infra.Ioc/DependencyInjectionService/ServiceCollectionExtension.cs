@@ -8,6 +8,7 @@ using QueroQuest.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using QueroQuest.Aplication.Mappings;
+using QueroQuest.Aplication.Services;
 
 public static class ServiceCollectionExtension
 {
@@ -21,6 +22,7 @@ public static class ServiceCollectionExtension
         services.AddTransient<ICategoriaRepository, CategoriaRepository>();
         services.AddTransient<IProdutoRepository, ProdutoRepository>();
         services.AddTransient<IUnitOfWork, UnitOfWork>();
+        services.AddTransient<ICategoriaService, CategoriaService>();
 
         var mappingConfig = new MapperConfiguration(c => {c.AddProfile(new MappingProfile());});
         IMapper mapper = mappingConfig.CreateMapper();
