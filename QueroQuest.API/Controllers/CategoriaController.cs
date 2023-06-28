@@ -12,11 +12,13 @@ namespace QueroQuest.API.Controllers;
 public class CategoriaController : ControllerBase
 {
     private readonly IUnitOfWork _unitOfWork;
+    private readonly ICategoriaService _categoriaService;
     private readonly IMapper _mapper;
-    public CategoriaController(IUnitOfWork unitOfWork, IMapper mapper)
+    public CategoriaController(IUnitOfWork unitOfWork, IMapper mapper, ICategoriaService categoriaService)
     {
         _unitOfWork = unitOfWork;
         _mapper = mapper;
+        _categoriaService = categoriaService;
     }
 
     [HttpGet("Produtos")]
@@ -24,7 +26,7 @@ public class CategoriaController : ControllerBase
     {
         try
         {
-            var categoria = _unitOfWork.CategoriaRepository.GetCategoriaPorProdutos().ToList();
+            var categoria = _categoriaService.GetCategoriaPorProdutos().ToList();
             if (categoria == null)
             {
                 return NotFound("Produtos não encontrados");
