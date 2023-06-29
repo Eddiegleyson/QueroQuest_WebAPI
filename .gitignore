@@ -30,5 +30,13 @@ msbuild.log
 msbuild.err
 msbuild.wrn
 
+# Visual C++ cache files
+ipch/
+*.aps
+*.ncb
+*.opensdf
+*.sdf
+*.cachefile
+
 # Visual Studio 2015
 .vs/

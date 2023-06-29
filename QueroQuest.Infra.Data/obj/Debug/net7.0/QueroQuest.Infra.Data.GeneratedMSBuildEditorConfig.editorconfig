@@ -8,4 +8,4 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = QueroQuest.Infra.Data
-build_property.ProjectDir = /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Infra.Data/
+build_property.ProjectDir = /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Data/
