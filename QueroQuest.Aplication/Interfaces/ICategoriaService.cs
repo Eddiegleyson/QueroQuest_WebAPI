@@ -1,12 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using QueroQuest.Aplication.DTOs;
 
 namespace QueroQuest.Aplication.Interfaces
 {
-    public interface ICategoriaService : ICategoriaRepository
+    public interface ICategoriaService 
     {
+        Task<IEnumerable<CategoriaDTO>> GetCategoriaPorProdutos();
+        Task<IEnumerable<CategoriaDTO>> ObterCategoriasOrdenadoPorId();
+        Task<IEnumerable<CategoriaDTO>> GetAll();
         
+        Task<CategoriaDTO> GetById(int? id);
+        Task<CategoriaDTO> Add(CategoriaDTO categoriaDto);
+        Task Update(CategoriaDTO categoriaDto);
+        Task Remove(int? id);
     }
 }

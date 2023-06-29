@@ -4,6 +4,6 @@ using QueroQuest.Domain.Entities;
 
 public interface ICategoriaRepository : IRepository<Categoria>
 {
-    IEnumerable<Categoria> ObterCategoriasOrdenadoPorId ();
-    IEnumerable<Categoria> GetCategoriaPorProdutos();
+    Task<IEnumerable<Categoria>> ObterCategoriasOrdenadoPorIdAsync();
+    Task<IEnumerable<Categoria>> GetCategoriaPorProdutosAsync();
 }

@@ -12,13 +12,13 @@ public class CategoriaRepository : Repository<Categoria>, ICategoriaRepository
 
     }
 
-    public IEnumerable<Categoria> GetCategoriaPorProdutos()
+    public async Task<IEnumerable<Categoria>> GetCategoriaPorProdutosAsync()
     {
-        return Get().Include(w => w.Produtos);
+        return await Get().Include(w => w.Produtos).ToListAsync();
     }
 
-    public IEnumerable<Categoria> ObterCategoriasOrdenadoPorId()
+    public async Task<IEnumerable<Categoria>> ObterCategoriasOrdenadoPorIdAsync()
     {
-        return Get().OrderBy(w => w.CategoriaId).ToList();
+        return await Get().OrderBy(w => w.CategoriaId).ToListAsync();
     }
 }

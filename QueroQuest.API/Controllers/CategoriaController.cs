@@ -11,29 +11,32 @@ namespace QueroQuest.API.Controllers;
 [ApiController]
 public class CategoriaController : ControllerBase
 {
-    private readonly IUnitOfWork _unitOfWork;
+    //private readonly IUnitOfWork _unitOfWork;
     private readonly ICategoriaService _categoriaService;
-    private readonly IMapper _mapper;
-    public CategoriaController(IUnitOfWork unitOfWork, IMapper mapper, ICategoriaService categoriaService)
+    //private readonly IMapper _mapper;
+    public CategoriaController(
+        //IUnitOfWork unitOfWork,
+        //IMapper mapper, 
+          ICategoriaService categoriaService
+        )
     {
-        _unitOfWork = unitOfWork;
-        _mapper = mapper;
+        //_unitOfWork = unitOfWork;
+        //_mapper = mapper;
         _categoriaService = categoriaService;
     }
 
     [HttpGet("Produtos")]
-    public ActionResult<IEnumerable<CategoriaDTO>> GetCategoriaProdutos()
+    public async Task<ActionResult<IEnumerable<CategoriaDTO>>> GetCategoriaProdutos()
     {
         try
         {
-            var categoria = _categoriaService.GetCategoriaPorProdutos().ToList();
-            if (categoria == null)
+            var categoriaResultDTO = await _categoriaService.GetCategoriaPorProdutos();
+            if (categoriaResultDTO == null)
             {
                 return NotFound("Produtos não encontrados");
             }
             else
             {
-                var categoriaResultDTO = _mapper.Map<List<CategoriaDTO>>(categoria);
                 return Ok(categoriaResultDTO);
             }
         }
@@ -44,19 +47,18 @@ public class CategoriaController : ControllerBase
     }
 
     [HttpGet("ObterCategoriasOrdenadoPorId")]
-    public ActionResult<IEnumerable<CategoriaDTO>> ObterCategoriasOrdenadoPorId()
+    public async Task<ActionResult<IEnumerable<CategoriaDTO>>> ObterCategoriasOrdenadoPorId()
     {
         try
         {
-            var categorias = _unitOfWork.CategoriaRepository.ObterCategoriasOrdenadoPorId().ToList();
-            if (categorias is null)
+            var categoriaResultDTO = await _categoriaService.ObterCategoriasOrdenadoPorId();
+            if (categoriaResultDTO is null)
             {
                 return NotFound("Lista de Categorias não encontrada");
             }
             else
             {
-                var categoriasResultDTO = _mapper.Map<List<CategoriaDTO>>(categorias);
-                return Ok(categoriasResultDTO);
+                return Ok(categoriaResultDTO);
             }
         }
         catch
@@ -66,18 +68,17 @@ public class CategoriaController : ControllerBase
     }
 
     [HttpGet]
-    public ActionResult<IEnumerable<CategoriaDTO>> Get()
+    public async Task<ActionResult<IEnumerable<CategoriaDTO>>> Get()
     {
         try
         {
-            var categorias = _unitOfWork.CategoriaRepository.Get().ToList();
-            if (categorias is null)
+            var categoriasResultDTO = await _categoriaService.GetAll();
+            if (categoriasResultDTO is null)
             {
                 return NotFound("Categoria não encontrada");
             }
             else
             {
-                var categoriasResultDTO = _mapper.Map<List<CategoriaDTO>>(categorias);
                 return Ok(categoriasResultDTO);
             }
         }
@@ -88,18 +89,17 @@ public class CategoriaController : ControllerBase
     }
 
     [HttpGet("GetById", Name = "ObterCategoria")]
-    public ActionResult<CategoriaDTO> Get(int id)
+    public async Task<ActionResult<CategoriaDTO>> Get(int id)
     {
         try
         {
-            var Categoria = _unitOfWork.CategoriaRepository.GetById(p => p.CategoriaId == id);
-            if (Categoria is null)
+            var categoriaResultDTO = _categoriaService.GetById(id);
+            if (categoriaResultDTO is null)
             {
                 return NotFound($"ID = {id} da Categoria não encontrada");
             }
             else
             {
-                var categoriaResultDTO = _mapper.Map<CategoriaDTO>(Categoria);
                 return Ok(categoriaResultDTO);
             }
         }
@@ -111,7 +111,7 @@ public class CategoriaController : ControllerBase
     }
 
     [HttpPost]
-    public ActionResult Post([FromBody] CategoriaDTO categoriaParam)
+    public async Task<ActionResult> Post([FromBody] CategoriaDTO categoriaParam)
     {
         try
         {
@@ -121,12 +121,8 @@ public class CategoriaController : ControllerBase
             }
             else
             {
-                var categoria = _mapper.Map<Categoria>(categoriaParam);
-                _unitOfWork.CategoriaRepository.Add(categoria);
-                _unitOfWork.Commit();
-
-                var categoriaResultDTO = _mapper.Map<CategoriaDTO>(categoria);
-                return new CreatedAtRouteResult("ObterCategoria", new { id = categoria.CategoriaId }, categoriaResultDTO);
+                var categoriaResultDTO = _categoriaService.Add(categoriaParam);
+                return new CreatedAtRouteResult("ObterCategoria", new { id = categoriaResultDTO.Result.CategoriaId }, categoriaResultDTO.Result);
             }
         }
         catch
