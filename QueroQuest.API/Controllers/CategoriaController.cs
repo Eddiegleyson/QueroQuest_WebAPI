@@ -114,8 +114,8 @@ public class CategoriaController : ControllerBase
             }
             else
             {
-                var categoriaResultDTO = _categoriaService.Add(categoriaParam);
-                return new CreatedAtRouteResult("ObterCategoria", new { id = categoriaResultDTO.Result.CategoriaId }, categoriaResultDTO.Result);
+                int categoriaId = await _categoriaService.Add(categoriaParam);
+                return new CreatedAtRouteResult("ObterCategoria", new { id = categoriaId }, categoriaParam);
             }
         }
         catch
