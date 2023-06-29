@@ -11,17 +11,10 @@ namespace QueroQuest.API.Controllers;
 [ApiController]
 public class CategoriaController : ControllerBase
 {
-    //private readonly IUnitOfWork _unitOfWork;
     private readonly ICategoriaService _categoriaService;
-    //private readonly IMapper _mapper;
-    public CategoriaController(
-        //IUnitOfWork unitOfWork,
-        //IMapper mapper, 
-          ICategoriaService categoriaService
-        )
+
+    public CategoriaController(ICategoriaService categoriaService)
     {
-        //_unitOfWork = unitOfWork;
-        //_mapper = mapper;
         _categoriaService = categoriaService;
     }
 
