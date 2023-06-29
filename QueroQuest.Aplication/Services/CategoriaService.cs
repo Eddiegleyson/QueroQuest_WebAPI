@@ -34,7 +34,7 @@ namespace QueroQuest.Aplication.Services
             }
         }
 
-        public async Task<CategoriaDTO> Add(CategoriaDTO categoriaDto)
+        public async Task<int> Add(CategoriaDTO categoriaDto)
         {
             try
             {
@@ -42,9 +42,9 @@ namespace QueroQuest.Aplication.Services
                 _unitOfWork.CategoriaRepository.Add(categoria);
                 _unitOfWork.Commit();
 
-                var categoriaResultDTO = _mapper.Map<CategoriaDTO>(categoria);
+                int categoriaId = categoria.CategoriaId;
 
-                return categoriaResultDTO;
+                return categoriaId;
             }
             catch (Exception ex)
             {

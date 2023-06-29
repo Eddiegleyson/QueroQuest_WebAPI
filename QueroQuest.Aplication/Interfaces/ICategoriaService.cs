@@ -9,7 +9,7 @@ namespace QueroQuest.Aplication.Interfaces
         Task<IEnumerable<CategoriaDTO>> GetAll();
         
         Task<CategoriaDTO> GetById(int? id);
-        Task<CategoriaDTO> Add(CategoriaDTO categoriaDto);
+        Task <int> Add(CategoriaDTO categoriaDto);
         Task Update(CategoriaDTO categoriaDto);
         Task Remove(int? id);
     }
