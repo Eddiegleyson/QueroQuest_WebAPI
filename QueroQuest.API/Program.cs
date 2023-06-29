@@ -1,4 +1,3 @@
-using Microsoft.OpenApi.Models;
 using QueroQuest.Infra.Ioc.DependencyInjectionService;
 
 var builder = WebApplication.CreateBuilder(args);
