@@ -1,4 +1,4 @@
-namespace QueroQuest.Aplication.Interfaces;
+namespace QueroQuest.Domain.Interfaces;
 
 public interface IUnitOfWork
 {

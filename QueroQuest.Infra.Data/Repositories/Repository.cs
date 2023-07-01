@@ -1,6 +1,7 @@
 using System.Linq.Expressions;
 using Microsoft.EntityFrameworkCore;
 using QueroQuest.Aplication.Interfaces;
+using QueroQuest.Domain.Interfaces;
 using QueroQuest.Infra.Data.Context;
 
 namespace QueroQuest.Infra.Data.Repository;

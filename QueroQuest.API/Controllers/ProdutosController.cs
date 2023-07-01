@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using QueroQuest.Aplication.DTOs;
 using QueroQuest.Aplication.Interfaces;
 using QueroQuest.Domain.Entities;
+using QueroQuest.Domain.Interfaces;
 
 namespace QueroQuest.API.Controllers;
 

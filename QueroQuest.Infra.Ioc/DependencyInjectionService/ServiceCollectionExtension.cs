@@ -1,13 +1,14 @@
 namespace QueroQuest.Infra.Ioc.DependencyInjectionService;
 
 using Microsoft.Extensions.DependencyInjection;
-using QueroQuest.Aplication.Interfaces;
+using QueroQuest.Domain.Interfaces;
 using QueroQuest.Infra.Data.Repository;
 using Microsoft.Extensions.Configuration;
 using QueroQuest.Infra.Data.Context;
 using Microsoft.EntityFrameworkCore;
 using AutoMapper;
 using QueroQuest.Aplication.Mappings;
+using QueroQuest.Aplication.Interfaces;
 using QueroQuest.Aplication.Services;
 
 public static class ServiceCollectionExtension

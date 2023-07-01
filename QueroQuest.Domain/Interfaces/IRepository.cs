@@ -1,5 +1,4 @@
-namespace QueroQuest.Aplication.Interfaces;
-
+namespace QueroQuest.Domain.Interfaces;
 using System.Linq.Expressions;
 public interface IRepository<T>
 {

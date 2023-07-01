@@ -4,6 +4,7 @@ using AutoMapper;
 using QueroQuest.Aplication.DTOs;
 using QueroQuest.Aplication.Interfaces;
 using QueroQuest.Domain.Entities;
+using QueroQuest.Domain.Interfaces;
 
 public class CategoriaService : ICategoriaService
 {
