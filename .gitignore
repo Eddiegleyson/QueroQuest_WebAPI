@@ -29,6 +29,10 @@ bld/
 msbuild.log
 msbuild.err
 msbuild.wrn
+*.cache
+*.dll
+*.exe
+*.pdb
 
 # Visual C++ cache files
 ipch/

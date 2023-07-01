@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ceO1yXvpOGsUjz8Y+jpfYmj7Y7Kkf2R3oDcYeNi/ZjyefJiyMuXGh4NkAT/2W9uabszTTB/6Y8VbfJpj5weCQA==",
+  "dgSpecHash": "wkOnCuLakFfr2lKBOVsAKc5EYkLm74f91PpzHSkdPnP4+jR/wBuJKM34yoAfMbXHd2L9x+npeyvTwMN0dzIRqg==",
   "success": true,
-  "projectFilePath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Infra.Ioc/QueroQuest.Infra.Ioc.csproj",
+  "projectFilePath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Ioc/QueroQuest.Infra.Ioc.csproj",
   "expectedPackageFiles": [
     "/Users/edgleysonalves/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/edgleysonalves/.nuget/packages/automapper.extensions.microsoft.dependencyinjection/12.0.1/automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Domain/QueroQuest.Domain.csproj": {}
+    "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/QueroQuest.Domain.csproj": {}
   },
   "projects": {
-    "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Domain/QueroQuest.Domain.csproj": {
+    "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/QueroQuest.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Domain/QueroQuest.Domain.csproj",
+        "projectUniqueName": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/QueroQuest.Domain.csproj",
         "projectName": "QueroQuest.Domain",
-        "projectPath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Domain/QueroQuest.Domain.csproj",
+        "projectPath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/QueroQuest.Domain.csproj",
         "packagesPath": "/Users/edgleysonalves/.nuget/packages/",
-        "outputPath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Domain/obj/",
+        "outputPath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/edgleysonalves/.nuget/NuGet/NuGet.Config"

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ucG8nd/NgsbG+kIUfkSdJHAVnH44oRmc8Uxc0TDg3wrAkivWnyhsLKkW/thKHafmd2EM/cUWEB5WfVx29Hj/Xw==",
+  "dgSpecHash": "VPLGdOjwxKblsIK062Yq5gftQAIdL1hbLN44Onf2tKtSUGsTBVStY+r/y33kEywk+S0G+bWU08Dob4+Ej3EqTQ==",
   "success": true,
-  "projectFilePath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Domain/QueroQuest.Domain.csproj",
+  "projectFilePath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/QueroQuest.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

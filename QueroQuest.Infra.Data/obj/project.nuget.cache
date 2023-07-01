@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "4ukjvQRYtri2p5HmSGQMozi0qLLlY7AioeZAyjKCcdmTT9eKFWvYWtnvU22ijwZoWHiXXB3BzhbfyMFz/NoK0g==",
+  "dgSpecHash": "2Zfsy2WhvNyVMDQVhncLKlKISwOKuWL/B9TbQOaAjT1K9ua4nzU9LntG0VtC9rrmg/ZvLHq3SjQX59dhcTBL/A==",
   "success": true,
-  "projectFilePath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Infra.Data/QueroQuest.Infra.Data.csproj",
+  "projectFilePath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Data/QueroQuest.Infra.Data.csproj",
   "expectedPackageFiles": [
     "/Users/edgleysonalves/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/edgleysonalves/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

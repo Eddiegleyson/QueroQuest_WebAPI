@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "LbC9+PGCsuIDsIFjsj4MTSJ4YI2HqR4eQ8BmHTS/N6AniYNbtjbtZMsyy6h5RXp72jsddqUYgtticFpKmb/ztQ==",
+  "dgSpecHash": "YFS6Ng5UTSIdBqalRZFLv6eaP9DGKNZENC/6cQHvRZHJC2TbpWnmx23tY9ueKeVgBnaB4mu8HOm0+Ild62tHWA==",
   "success": true,
-  "projectFilePath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Aplication/QueroQuest.Aplication.csproj",
+  "projectFilePath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Aplication/QueroQuest.Aplication.csproj",
   "expectedPackageFiles": [
     "/Users/edgleysonalves/.nuget/packages/automapper/12.0.1/automapper.12.0.1.nupkg.sha512",
     "/Users/edgleysonalves/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512"
