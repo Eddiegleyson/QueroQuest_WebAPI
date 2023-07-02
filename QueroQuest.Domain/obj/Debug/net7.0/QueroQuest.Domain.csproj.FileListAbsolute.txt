@@ -10,3 +10,15 @@
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Domain/obj/Debug/net7.0/refint/QueroQuest.Domain.dll
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Domain/obj/Debug/net7.0/QueroQuest.Domain.pdb
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Domain/obj/Debug/net7.0/ref/QueroQuest.Domain.dll
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/bin/Debug/net7.0/QueroQuest.Domain.deps.json
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/bin/Debug/net7.0/QueroQuest.Domain.dll
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/bin/Debug/net7.0/QueroQuest.Domain.pdb
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/obj/Debug/net7.0/QueroQuest.Domain.csproj.AssemblyReference.cache
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/obj/Debug/net7.0/QueroQuest.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/obj/Debug/net7.0/QueroQuest.Domain.AssemblyInfoInputs.cache
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/obj/Debug/net7.0/QueroQuest.Domain.AssemblyInfo.cs
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/obj/Debug/net7.0/QueroQuest.Domain.csproj.CoreCompileInputs.cache
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/obj/Debug/net7.0/QueroQuest.Domain.dll
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/obj/Debug/net7.0/refint/QueroQuest.Domain.dll
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/obj/Debug/net7.0/QueroQuest.Domain.pdb
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Domain/obj/Debug/net7.0/ref/QueroQuest.Domain.dll
