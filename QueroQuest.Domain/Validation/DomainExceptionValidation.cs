@@ -5,8 +5,9 @@ using System.Threading.Tasks;
 
 namespace QueroQuest.Domain.Validation
 {
-    public class DomainExceptionValidation
+    public class DomainExceptionValidation : Exception
     {
-        
+        public DomainExceptionValidation(string error) : base(error)
+        { }
     }
 }

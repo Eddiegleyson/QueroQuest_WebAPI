@@ -540,7 +540,8 @@ obj/
 .LSOverride
 
 # Icon must end with two \r
-Icon
+Icon
+
 
 # Thumbnails
 ._*
@@ -763,3 +764,50 @@ Temporary Items
 
 # Custom rules (everything added below won't be overriden by 'Generate .gitignore File' if you use 'Update' option)
 
+# Igonere files .dll, .pdb, .cache in the project before commit in repository Git
+QueroQuest.API/bin/Debug/net7.0/QueroQuest.API.dll
+QueroQuest.API/bin/Debug/net7.0/QueroQuest.API.pdb
+QueroQuest.API/bin/Debug/net7.0/QueroQuest.Aplication.dll
+QueroQuest.API/bin/Debug/net7.0/QueroQuest.Aplication.pdb
+QueroQuest.API/bin/Debug/net7.0/QueroQuest.Domain.dll
+QueroQuest.API/bin/Debug/net7.0/QueroQuest.Domain.pdb
+QueroQuest.API/bin/Debug/net7.0/QueroQuest.Infra.Data.dll
+QueroQuest.API/bin/Debug/net7.0/QueroQuest.Infra.Data.pdb
+QueroQuest.API/bin/Debug/net7.0/QueroQuest.Infra.Ioc.dll
+QueroQuest.API/bin/Debug/net7.0/QueroQuest.Infra.Ioc.pdb
+QueroQuest.API/obj/Debug/net7.0/QueroQuest.API.csproj.AssemblyReference.cache
+QueroQuest.API/obj/Debug/net7.0/QueroQuest.API.dll
+QueroQuest.API/obj/Debug/net7.0/QueroQuest.API.pdb
+QueroQuest.Aplication/bin/Debug/net7.0/QueroQuest.Aplication.dll
+QueroQuest.Aplication/bin/Debug/net7.0/QueroQuest.Aplication.pdb
+QueroQuest.Aplication/bin/Debug/net7.0/QueroQuest.Domain.dll
+QueroQuest.Aplication/bin/Debug/net7.0/QueroQuest.Domain.pdb
+QueroQuest.Aplication/obj/Debug/net7.0/QueroQuest.Aplication.csproj.AssemblyReference.cache
+QueroQuest.Aplication/obj/Debug/net7.0/QueroQuest.Aplication.dll
+QueroQuest.Aplication/obj/Debug/net7.0/QueroQuest.Aplication.pdb
+QueroQuest.Domain/bin/Debug/net7.0/QueroQuest.Domain.dll
+QueroQuest.Domain/bin/Debug/net7.0/QueroQuest.Domain.pdb
+QueroQuest.Domain/obj/Debug/net7.0/QueroQuest.Domain.dll
+QueroQuest.Domain/obj/Debug/net7.0/QueroQuest.Domain.pdb
+QueroQuest.Domain/obj/Debug/net7.0/ref/QueroQuest.Domain.dll
+QueroQuest.Domain/obj/Debug/net7.0/refint/QueroQuest.Domain.dll
+QueroQuest.Infra.Data/bin/Debug/net7.0/QueroQuest.Aplication.dll
+QueroQuest.Infra.Data/bin/Debug/net7.0/QueroQuest.Aplication.pdb
+QueroQuest.Infra.Data/bin/Debug/net7.0/QueroQuest.Domain.dll
+QueroQuest.Infra.Data/bin/Debug/net7.0/QueroQuest.Domain.pdb
+QueroQuest.Infra.Data/bin/Debug/net7.0/QueroQuest.Infra.Data.dll
+QueroQuest.Infra.Data/bin/Debug/net7.0/QueroQuest.Infra.Data.pdb
+QueroQuest.Infra.Data/obj/Debug/net7.0/QueroQuest.Infra.Data.csproj.AssemblyReference.cache
+QueroQuest.Infra.Data/obj/Debug/net7.0/QueroQuest.Infra.Data.dll
+QueroQuest.Infra.Data/obj/Debug/net7.0/QueroQuest.Infra.Data.pdb
+QueroQuest.Infra.Ioc/bin/Debug/net7.0/QueroQuest.Aplication.dll
+QueroQuest.Infra.Ioc/bin/Debug/net7.0/QueroQuest.Aplication.pdb
+QueroQuest.Infra.Ioc/bin/Debug/net7.0/QueroQuest.Domain.dll
+QueroQuest.Infra.Ioc/bin/Debug/net7.0/QueroQuest.Domain.pdb
+QueroQuest.Infra.Ioc/bin/Debug/net7.0/QueroQuest.Infra.Data.dll
+QueroQuest.Infra.Ioc/bin/Debug/net7.0/QueroQuest.Infra.Data.pdb
+QueroQuest.Infra.Ioc/bin/Debug/net7.0/QueroQuest.Infra.Ioc.dll
+QueroQuest.Infra.Ioc/bin/Debug/net7.0/QueroQuest.Infra.Ioc.pdb
+QueroQuest.Infra.Ioc/obj/Debug/net7.0/QueroQuest.Infra.Ioc.csproj.AssemblyReference.cache
+QueroQuest.Infra.Ioc/obj/Debug/net7.0/QueroQuest.Infra.Ioc.dll
+QueroQuest.Infra.Ioc/obj/Debug/net7.0/QueroQuest.Infra.Ioc.pdb
