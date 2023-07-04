@@ -8,8 +8,8 @@ namespace QueroQuest.Infra.Data.Repository;
 
     public class Repository<T> : IRepository<T> where T : class
 {
-    protected AppDbContext _context;
-    public Repository(AppDbContext context)
+    protected ApplicationDbContext _context;
+    public Repository(ApplicationDbContext context)
     {
         _context = context;
     }

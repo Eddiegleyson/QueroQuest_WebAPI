@@ -1,37 +1,47 @@
 namespace QueroQuest.Domain.Entities;
 
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
-using System.Text.Json.Serialization;
-
-[Table("Produtos")]
-public class Produto
+using QueroQuest.Domain.Validation;
+public sealed class Produto : Entity
 {
+    
+    public Produto(string nome, string descricao, decimal preco, string imagemUrl, int estoque, DateTime dataCadastro)
+    {
+        ValidateDomain(nome, descricao, preco, imagemUrl, estoque, dataCadastro);
+    }
+    public void Update(string nome, string descricao, decimal preco, string imagemUrl, int estoque, DateTime dataCadastro, int categoriaId)
+    {
+        ValidateDomain(nome, descricao, preco, imagemUrl, estoque, dataCadastro);
+        CategoriaId = categoriaId;
+    }
+    public void ValidateDomain(string nome, string descricao, decimal preco, string imagemUrl, int estoque, DateTime dataCadastro)
+    {
+        DomainExceptionValidation.When(hasError: string.IsNullOrEmpty(nome), error: "O Nome é obrigatório.");
+        DomainExceptionValidation.When(hasError: nome.Length < 3, error: "O Nome deve ter no minimo 3 caracteres.");
 
-    [Key]
-    public int ProdutoId { get; set; }
+        DomainExceptionValidation.When(hasError: string.IsNullOrEmpty(descricao), error: "descrição obrigatória.");
+        DomainExceptionValidation.When(hasError: descricao.Length < 5, error: "Descrição deve ter no minimo 5 carcteres.");
+        
+        DomainExceptionValidation.When(hasError: preco < 0, error: "Valor do preço invalido, deve ser maior que 0.");
 
-    [Required]
-    [StringLength(80)]
-    public string? nome { get; set; }
+        DomainExceptionValidation.When(hasError: imagemUrl?.Length > 250, error: "O Nome da Imagem não pode exceder 250 caracteres.");
 
-    [Required]
-    [StringLength(300)]
+        DomainExceptionValidation.When(hasError: estoque < 0, error: "Estoque inválido");
+
+        Nome = nome;
+        Descricao = descricao;
+        Preco = preco;
+        ImagemUrl = imagemUrl;
+        Estoque = estoque;
+        DataCadastro = dataCadastro;
+    }
+  
+    public string? Nome { get; set; }
     public string? Descricao { get; set; }
-
-    [Required]
-    [Column(TypeName = "decimal(10,2)")]
-    public decimal? preco { get; set; }
-
-    [Required]
-    [StringLength(300)]
+    public decimal? Preco { get; set; }
     public string? ImagemUrl { get; set; }
-
-    public float? estoque { get; set; }
+    public int? Estoque { get; set; }
     public DateTime DataCadastro { get; set; }
 
     public int CategoriaId {get; set;}
-    
-    [JsonIgnore]
     public Categoria? Categoria {get; set;}
 }

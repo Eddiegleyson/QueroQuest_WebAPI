@@ -1,27 +1,40 @@
 namespace QueroQuest.Domain.Entities;
 
-using System.Collections.ObjectModel;
-using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+using QueroQuest.Domain.Validation;
 
-[Table("Categorias")]
-public class Categoria
+public sealed class Categoria : Entity
 {
-    public Categoria()
+    public Categoria(string nome, string imagemUrl)
     {
-        Produtos = new Collection<Produto>();
+        ValidateDomain(nome,imagemUrl);
     }
 
-    [Key]
-    public int CategoriaId { get; set; }
-
-    [Required]
-    [StringLength(10, ErrorMessage = " O nome deve ter no maximo 10 carcteres")]
-    public string? nome { get; set; }
-
-    [Required]
-    [StringLength(300)]
+    public Categoria(int id, string nome, string imagemUrl)
+    {
+        DomainExceptionValidation.When(hasError: id < 0, error: "Id invalido!");
+        Id = id;
+        ValidateDomain(nome, imagemUrl);
+        
+    }
+    public string? Nome { get; set; }
     public string? ImagemUrl { get; set; }
-
     public ICollection<Produto> Produtos {get; set;} 
+
+    public void ValidateDomain(string nome, string imagemUrl)
+    {
+        DomainExceptionValidation.When(string.IsNullOrEmpty(nome),
+            "Nome inválido. O nome é obrigatório");
+
+        DomainExceptionValidation.When(string.IsNullOrEmpty(imagemUrl),
+            "Nome da imagem inválido. O nome é obrigatório");
+
+        DomainExceptionValidation.When(nome.Length < 3,
+           "O nome deve ter no mínimo 3 caracteres");
+
+        DomainExceptionValidation.When(imagemUrl.Length < 5,
+            "Nome da imagem deve ter no mínimo 5 caracteres");
+
+        Nome = nome;
+        ImagemUrl = imagemUrl;
+    }
 }

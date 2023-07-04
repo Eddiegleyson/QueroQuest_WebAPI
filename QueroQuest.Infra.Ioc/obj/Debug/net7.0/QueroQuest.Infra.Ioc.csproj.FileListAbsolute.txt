@@ -18,6 +18,7 @@
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Infra.Ioc/obj/Debug/net7.0/QueroQuest.Infra.Ioc.pdb
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest/QueroQuest.Infra.Ioc/obj/Debug/net7.0/ref/QueroQuest.Infra.Ioc.dll
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Ioc/bin/Debug/net7.0/QueroQuest.Infra.Ioc.deps.json
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Ioc/bin/Debug/net7.0/QueroQuest.Infra.Ioc.runtimeconfig.json
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Ioc/bin/Debug/net7.0/QueroQuest.Infra.Ioc.dll
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Ioc/bin/Debug/net7.0/QueroQuest.Infra.Ioc.pdb
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Ioc/bin/Debug/net7.0/QueroQuest.Aplication.dll
@@ -35,4 +36,5 @@
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Ioc/obj/Debug/net7.0/QueroQuest.Infra.Ioc.dll
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Ioc/obj/Debug/net7.0/refint/QueroQuest.Infra.Ioc.dll
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Ioc/obj/Debug/net7.0/QueroQuest.Infra.Ioc.pdb
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Ioc/obj/Debug/net7.0/QueroQuest.Infra.Ioc.genruntimeconfig.cache
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Ioc/obj/Debug/net7.0/ref/QueroQuest.Infra.Ioc.dll

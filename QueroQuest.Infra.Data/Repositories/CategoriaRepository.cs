@@ -8,7 +8,7 @@ namespace QueroQuest.Infra.Data.Repository;
 
 public class CategoriaRepository : Repository<Categoria>, ICategoriaRepository
 {
-    public CategoriaRepository(AppDbContext context) : base(context)
+    public CategoriaRepository(ApplicationDbContext context) : base(context)
     {
 
     }
@@ -20,6 +20,6 @@ public class CategoriaRepository : Repository<Categoria>, ICategoriaRepository
 
     public async Task<IEnumerable<Categoria>> ObterCategoriasOrdenadoPorIdAsync()
     {
-        return await Get().OrderBy(w => w.CategoriaId).ToListAsync();
+        return await Get().OrderBy(w => w.Id).ToListAsync();
     }
 }

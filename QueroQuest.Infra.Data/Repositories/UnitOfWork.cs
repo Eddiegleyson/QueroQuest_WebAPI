@@ -8,8 +8,8 @@ public class UnitOfWork : IUnitOfWork
 {
     private ProdutoRepository _produtoRepo;
     private CategoriaRepository _categorisRepo;
-    public AppDbContext _context;
-    public UnitOfWork(AppDbContext contexto)
+    public ApplicationDbContext _context;
+    public UnitOfWork(ApplicationDbContext contexto)
     {
         _context = contexto;
     }

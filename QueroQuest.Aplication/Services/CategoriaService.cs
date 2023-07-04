@@ -38,7 +38,7 @@ public class CategoriaService : ICategoriaService
             _unitOfWork.CategoriaRepository.Add(categoria);
             _unitOfWork.Commit();
 
-            int categoriaId = categoria.CategoriaId;
+            int categoriaId = categoria.Id;
 
             return categoriaId;
         }
@@ -52,7 +52,7 @@ public class CategoriaService : ICategoriaService
     {
         try
         {
-            var categoriaEntity = _unitOfWork.CategoriaRepository.GetById(p => p.CategoriaId == id);
+            var categoriaEntity = _unitOfWork.CategoriaRepository.GetById(p => p.Id == id);
             var categoriaResultDTO = _mapper.Map<CategoriaDTO>(categoriaEntity);
             return categoriaResultDTO;
         }

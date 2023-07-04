@@ -7,12 +7,12 @@ namespace QueroQuest.Infra.Data.Repository;
 
 public class ProdutoRepository : Repository<Produto>, IProdutoRepository
 {
-    public ProdutoRepository(AppDbContext context) : base(context)
+    public ProdutoRepository(ApplicationDbContext context) : base(context)
     {
 
     }
     public IEnumerable<Produto> GetProdutoPorPreco()
     {
-        return Get().OrderBy(c => c.preco).ToList();
+        return Get().OrderBy(c => c.Preco).ToList();
     }
 }
