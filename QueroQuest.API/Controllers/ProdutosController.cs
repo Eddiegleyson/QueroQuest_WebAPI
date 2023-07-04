@@ -59,27 +59,26 @@ public class ProdutosController : ControllerBase
     //     }
     // }
 
-    // [HttpGet("GetById", Name = "ObterProduto")]
-    // public ActionResult<ProdutoDTO> Get(int id)
-    // {
-    //     try
-    //     {
-    //         var produto = _unitOfWork.ProdutoRepository.GetById(p => p.Id == id);
-    //         if (produto is null)
-    //         {
-    //             return NotFound("Produto não encontardo.");
-    //         }
-    //         else
-    //         {
-    //             var produtosResultDTO = _mapper.Map<ProdutoDTO>(produto);
-    //             return Ok(produtosResultDTO);
-    //         }
-    //     }
-    //     catch
-    //     {
-    //         return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um erro no sistema.");
-    //     }
-    // }
+    [HttpGet("GetById", Name = "ObterProduto")]
+    public ActionResult<ProdutoDTO> Get(int id)
+    {
+        try
+        {
+            var produtosResultDTO = _produtoService.GetById(id);
+            if (produtosResultDTO is null)
+            {
+                return NotFound("Produto não encontardo.");
+            }
+            else
+            {
+                return Ok(produtosResultDTO.Result);
+            }
+        }
+        catch
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um erro no sistema.");
+        }
+    }
 
     [HttpPost]
     public async Task<ActionResult> Post([FromBody] ProdutoDTO produtoDto)

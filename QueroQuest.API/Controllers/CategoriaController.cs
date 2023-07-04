@@ -94,7 +94,7 @@ public class CategoriaController : ControllerBase
             }
             else
             {
-                return Ok(categoriaResultDTO);
+                return Ok(categoriaResultDTO.Result);
             }
         }
         catch
