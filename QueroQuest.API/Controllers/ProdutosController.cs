@@ -18,46 +18,26 @@ public class ProdutosController : ControllerBase
         _produtoService = produtoService;
     }
 
-    // [HttpGet("GetProdutoPorPreco")]
-    // public ActionResult<IEnumerable<ProdutoDTO>> GetProdutoPreco()
-    // {
-    //     try
-    //     {
-    //         var produtos = _unitOfWork.ProdutoRepository.GetProdutoPorPreco().ToList();
-    //         var produtosResultDTO = _mapper.Map<List<ProdutoDTO>>(produtos);
-    //         if (produtos is null)
-    //         {
-    //             return NotFound("Lista de Produtos POR PREÇO não encontrado");
-    //         }
-    //         return Ok(produtosResultDTO);
-    //     }
-    //     catch
-    //     {
-    //         return StatusCode(StatusCodes.Status500InternalServerError, $"ocorreu um problema no sistema");
-    //     }
-    // }
-
-    // [HttpGet]
-    // public ActionResult<IEnumerable<ProdutoDTO>> Get()
-    // {
-    //     try
-    //     {
-    //         var produtos = _unitOfWork.ProdutoRepository.Get().AsNoTracking().ToList();
-    //         if (produtos is null)
-    //         {
-    //             return NotFound("Produto não encontrado");
-    //         }
-    //         else
-    //         {
-    //             var produtosResultDTO = _mapper.Map<List<ProdutoDTO>>(produtos);
-    //             return Ok(produtosResultDTO);
-    //         }
-    //     }
-    //     catch
-    //     {
-    //         return StatusCode(StatusCodes.Status500InternalServerError, $"ocorreu um problema no sistema");
-    //     }
-    // }
+    [HttpGet("GetProdutoPorPreco")]
+    public async Task<ActionResult<IEnumerable<ProdutoDTO>>> GetProdutoPreco()
+    {
+        try
+        {
+            var produtoResultDTO = await _produtoService.GetProdutoPorPreco();
+            if (produtoResultDTO is null)
+            {
+                return NotFound("Lista de Categorias não encontrada");
+            }
+            else
+            {
+                return Ok(produtoResultDTO);
+            }
+        }
+        catch
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, $"ocorreu um problema no sistema");
+        }
+    }
 
     [HttpGet("GetById", Name = "ObterProduto")]
     public ActionResult<ProdutoDTO> Get(int id)
