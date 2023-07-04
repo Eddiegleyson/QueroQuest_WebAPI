@@ -11,11 +11,5 @@ public class CategoriaConfiguration : IEntityTypeConfiguration<Categoria>
         builder.HasKey(t => t.Id);
         builder.Property(p => p.Nome).HasMaxLength(100).IsRequired();
         builder.Property(p => p.ImagemUrl).HasMaxLength(100).IsRequired();
-
-        builder.HasData(
-            new Categoria(1, "Material Escolar", "material.jpg"),
-            new Categoria(1, "Eletronicos", "Eletronicos.jpg"),
-            new Categoria(1, "Acessórios", "acessorios.jpg")
-        );
     }
 }
