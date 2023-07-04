@@ -4,5 +4,5 @@ using QueroQuest.Domain.Entities;
 
 public interface IProdutoRepository : IRepository<Produto>
 {
-    IEnumerable<Produto> GetProdutoPorPreco();
+    Task<IEnumerable<Produto>> GetProdutoPorPrecoAsync();
 }

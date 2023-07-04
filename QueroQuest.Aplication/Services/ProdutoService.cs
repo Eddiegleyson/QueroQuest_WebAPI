@@ -59,4 +59,18 @@ public class ProdutoService : IProdutoService
     {
         throw new NotImplementedException();
     }
+
+    public async Task<IEnumerable<ProdutoDTO>> GetProdutoPorPreco()
+    {
+        try
+        {
+            var produtosEntity = await _unitOfWork.ProdutoRepository.GetProdutoPorPrecoAsync();
+            var produtoResultDTO = _mapper.Map<IEnumerable<ProdutoDTO>>(produtosEntity);
+            return produtoResultDTO;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+    }
 }

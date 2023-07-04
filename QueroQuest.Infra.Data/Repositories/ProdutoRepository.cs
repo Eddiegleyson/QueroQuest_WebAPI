@@ -1,3 +1,4 @@
+using Microsoft.EntityFrameworkCore;
 using QueroQuest.Aplication.Interfaces;
 using QueroQuest.Domain.Entities;
 using QueroQuest.Domain.Interfaces;
@@ -8,11 +9,9 @@ namespace QueroQuest.Infra.Data.Repository;
 public class ProdutoRepository : Repository<Produto>, IProdutoRepository
 {
     public ProdutoRepository(ApplicationDbContext context) : base(context)
+    {}
+    public async Task<IEnumerable<Produto>> GetProdutoPorPrecoAsync()
     {
-
-    }
-    public IEnumerable<Produto> GetProdutoPorPreco()
-    {
-        return Get().OrderBy(c => c.Preco).ToList();
+        return await Get().OrderBy(w => w.Preco).ToListAsync();
     }
 }
