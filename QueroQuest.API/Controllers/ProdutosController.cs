@@ -67,7 +67,7 @@ public class ProdutosController : ControllerBase
     {
         try
         {
-            var produto = _unitOfWork.ProdutoRepository.GetById(p => p.ProdutoId == id);
+            var produto = _unitOfWork.ProdutoRepository.GetById(p => p.Id == id);
             if (produto is null)
             {
                 return NotFound("Produto não encontardo.");
@@ -102,7 +102,7 @@ public class ProdutosController : ControllerBase
 
                 var produtosResultDTO = _mapper.Map<ProdutoDTO>(produto);
 
-                return new CreatedAtRouteResult("ObterProduto", new { id = produto.ProdutoId }, produtosResultDTO);
+                return new CreatedAtRouteResult("ObterProduto", new { id = produto.Id }, produtosResultDTO);
             }
         }
         catch

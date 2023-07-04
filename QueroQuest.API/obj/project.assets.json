@@ -1374,6 +1374,7 @@
   "projectFileDependencyGroups": {
     "net7.0": [
       "Microsoft.AspNetCore.OpenApi >= 7.0.5",
+      "QueroQuest.Infra.Data >= 1.0.0",
       "QueroQuest.Infra.Ioc >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -1404,6 +1405,9 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
+            "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Data/QueroQuest.Infra.Data.csproj": {
+              "projectPath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Data/QueroQuest.Infra.Data.csproj"
+            },
             "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Ioc/QueroQuest.Infra.Ioc.csproj": {
               "projectPath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Infra.Ioc/QueroQuest.Infra.Ioc.csproj"
             }

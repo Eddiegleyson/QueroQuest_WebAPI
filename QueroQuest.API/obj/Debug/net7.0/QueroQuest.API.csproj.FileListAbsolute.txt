@@ -70,9 +70,9 @@
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.API/bin/Debug/net7.0/QueroQuest.Infra.Data.dll
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.API/bin/Debug/net7.0/QueroQuest.Infra.Ioc.dll
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.API/bin/Debug/net7.0/QueroQuest.Infra.Ioc.pdb
+/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.API/bin/Debug/net7.0/QueroQuest.Infra.Data.pdb
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.API/bin/Debug/net7.0/QueroQuest.Aplication.pdb
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.API/bin/Debug/net7.0/QueroQuest.Domain.pdb
-/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.API/bin/Debug/net7.0/QueroQuest.Infra.Data.pdb
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.API/obj/Debug/net7.0/QueroQuest.API.csproj.AssemblyReference.cache
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.API/obj/Debug/net7.0/QueroQuest.API.GeneratedMSBuildEditorConfig.editorconfig
 /Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.API/obj/Debug/net7.0/QueroQuest.API.AssemblyInfoInputs.cache

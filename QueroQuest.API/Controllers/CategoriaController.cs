@@ -75,9 +75,10 @@ public class CategoriaController : ControllerBase
                 return Ok(categoriasResultDTO);
             }
         }
-        catch
+        catch (Exception ex)
         {
-            return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um error no sistema.");
+           
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um error no sistema. ExceptionError: " + ex);
         }
     }
 

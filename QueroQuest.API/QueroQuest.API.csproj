@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QueroQuest.Infra.Ioc\QueroQuest.Infra.Ioc.csproj" />
+    <ProjectReference Include="..\QueroQuest.Infra.Data\QueroQuest.Infra.Data.csproj" />
   </ItemGroup>
 
 </Project>
