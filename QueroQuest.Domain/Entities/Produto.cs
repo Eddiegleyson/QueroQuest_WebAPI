@@ -3,7 +3,8 @@ namespace QueroQuest.Domain.Entities;
 using QueroQuest.Domain.Validation;
 public sealed class Produto : Entity
 {
-    
+    private Produto()
+    {}
     public Produto(string nome, string descricao, decimal preco, string imagemUrl, int estoque, DateTime dataCadastro)
     {
         ValidateDomain(nome, descricao, preco, imagemUrl, estoque, dataCadastro);
