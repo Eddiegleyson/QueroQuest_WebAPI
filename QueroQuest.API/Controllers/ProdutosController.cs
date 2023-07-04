@@ -1,11 +1,7 @@
 namespace QueroQuest.API.Controllers;
 
-using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using QueroQuest.Aplication.DTOs;
-using QueroQuest.Domain.Entities;
-using QueroQuest.Domain.Interfaces;
 using QueroQuest.Aplication.Interfaces;
 
 [Route("api/[controller]")]
