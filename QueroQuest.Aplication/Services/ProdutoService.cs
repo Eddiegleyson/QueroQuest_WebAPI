@@ -36,9 +36,18 @@ public class ProdutoService : IProdutoService
         }
     }
 
-    public Task<ProdutoDTO> GetById(int? id)
+    public async Task<ProdutoDTO> GetById(int? id)
     {
-        throw new NotImplementedException();
+        try
+        {
+            var produto = _unitOfWork.ProdutoRepository.GetById(p => p.Id == id);
+            var produtosResultDTO = _mapper.Map<ProdutoDTO>(produto);
+            return produtosResultDTO;
+        }
+        catch
+        {
+            throw;
+        }
     }
 
     public Task Remove(int? id)
