@@ -27,7 +27,7 @@ public static class ServiceCollectionExtension
         services.AddTransient<ICategoriaService, CategoriaService>();
         services.AddTransient<IProdutoService, ProdutoService>();
         services.AddTransient<IAuthService, AuthService>();
-
+        
         var mappingConfig = new MapperConfiguration(c => { c.AddProfile(new MappingProfile()); });
         IMapper mapper = mappingConfig.CreateMapper();
         services.AddSingleton(mapper);

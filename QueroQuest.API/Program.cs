@@ -16,7 +16,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.RegisterServices(builder.Configuration);
 
 //Esquema de autenticação 
-var key = Encoding.ASCII.GetBytes("VGVzdGVzIGNvbSAuTkVUIDcsIEFTUC5ORVQgQ29yZSBlIEpXVA==");
+var key = Encoding.ASCII.GetBytes(builder.Configuration.GetSection("TokenConfigurations").GetSection("SecretJwtKey").Value);
+
 builder.Services.AddAuthentication(x =>
 {
     x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;

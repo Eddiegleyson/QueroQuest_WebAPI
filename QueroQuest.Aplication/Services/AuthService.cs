@@ -8,7 +8,7 @@ using QueroQuest.Aplication.Interfaces;
 
 public class AuthService : IAuthService
 {
-    private readonly IConfiguration _configuration;
+    private IConfiguration _configuration;
     public AuthService(IConfiguration configuration)
     {
         _configuration = configuration;
@@ -17,8 +17,8 @@ public class AuthService : IAuthService
     {
         JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
 
-        double jwtExpirationTime = double.Parse(_configuration.GetConnectionString("JwtExpirationTime"));
-        string secretJwtKey = _configuration.GetConnectionString("SecretJwtKey");
+        double jwtExpirationTime = double.Parse(_configuration.GetSection("TokenConfigurations").GetSection("JwtExpirationTime").Value);
+        string secretJwtKey = _configuration.GetSection("TokenConfigurations").GetSection("SecretJwtKey").Value;
 
         byte[] key = Encoding.ASCII.GetBytes(secretJwtKey);
         SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
