@@ -10,10 +10,6 @@ using AutoMapper;
 using QueroQuest.Aplication.Mappings;
 using QueroQuest.Aplication.Interfaces;
 using QueroQuest.Aplication.Services;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.IdentityModel.Tokens;
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using System.Text;
 
 public static class ServiceCollectionExtension
 {
