@@ -11,6 +11,9 @@ using QueroQuest.Aplication.Mappings;
 using QueroQuest.Aplication.Interfaces;
 using QueroQuest.Aplication.Services;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using System.Text;
 
 public static class ServiceCollectionExtension
 {
@@ -32,6 +35,29 @@ public static class ServiceCollectionExtension
             options.Password.RequireLowercase = false;
         })
         .AddEntityFrameworkStores<ApplicationDbContext>();
+
+
+
+
+        services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
+        {
+            options.TokenValidationParameters = new TokenValidationParameters()
+            {
+                ClockSkew = TimeSpan.Zero,
+                ValidateIssuer = true,
+                ValidateAudience = true,
+                ValidateLifetime = true,
+                ValidateIssuerSigningKey = true,
+                ValidIssuer = "apiWithAuthBackend",
+                ValidAudience = "apiWithAuthBackend",
+                IssuerSigningKey = new SymmetricSecurityKey(
+                    Encoding.UTF8.GetBytes("!SomethingSecret!")
+                ),
+            };
+       });
+
+
+
 
         services.AddTransient<ICategoriaRepository, CategoriaRepository>();
         services.AddTransient<IProdutoRepository, ProdutoRepository>();
