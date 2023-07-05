@@ -1,10 +1,9 @@
-
 namespace QueroQuest.Infra.Data.Context;
 
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using QueroQuest.Domain.Entities;
-public class ApplicationDbContext : IdentityDbContext
+
+public class ApplicationDbContext : DbContext
 {
     public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) 
     { }
