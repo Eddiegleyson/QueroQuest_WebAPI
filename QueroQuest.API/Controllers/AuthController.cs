@@ -1,24 +1,23 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
+namespace QueroQuest.API.Controllers;
+
 using Microsoft.AspNetCore.Mvc;
-using teste = QueroQuest.API.SecurityServices.JWTProvider;
-
-namespace QueroQuest.API.Controllers
+using QueroQuest.Aplication.Interfaces;
+[ApiController]
+[Route("api/[controller]")]
+public class AuthController : ControllerBase
 {
-    [ApiController]
-    [Route("api/[controller]")]
-    public class AuthController : ControllerBase
-    {
-        teste.AuthenticationService _addAuthentication = new teste.AuthenticationService();
-        [HttpGet("Login")]
-        public async Task<ActionResult> Get()
-        {
-            var result = _addAuthentication.GenerateJwtToken();
+    private readonly IAuthService _authService;
 
-            return Ok(result);
-        }
+    public AuthController(IAuthService authService)
+    {
+        _authService = authService;
+    }
+
+    [HttpGet("AuthenticationAPI")]
+    public async Task<ActionResult> Get()
+    {
+        var result = _authService.GenerateJwtToken();
+
+        return Ok(result);
     }
 }

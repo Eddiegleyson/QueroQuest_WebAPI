@@ -1,19 +1,24 @@
+namespace QueroQuest.Aplication.Services;
+
 using System.IdentityModel.Tokens.Jwt;
-namespace QueroQuest.API.SecurityServices.JWTProvider;
-
 using System.Text;
+using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
+using QueroQuest.Aplication.Interfaces;
 
-public class AuthenticationService
+public class AuthService : IAuthService
 {
-    IConfiguration _configuration;
-    //public string GenerateJwtToken(AuthenticateRequest authenticateRequest, string userId)
+    private readonly IConfiguration _configuration;
+    public AuthService(IConfiguration configuration)
+    {
+        _configuration = configuration;
+    }
     public string GenerateJwtToken()
     {
         JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
 
-        double jwtExpirationTime = 15;
-        string secretJwtKey = "VGVzdGVzIGNvbSAuTkVUIDcsIEFTUC5ORVQgQ29yZSBlIEpXVA==";
+        double jwtExpirationTime = double.Parse(_configuration.GetConnectionString("JwtExpirationTime"));
+        string secretJwtKey = _configuration.GetConnectionString("SecretJwtKey");
 
         byte[] key = Encoding.ASCII.GetBytes(secretJwtKey);
         SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
@@ -30,5 +35,4 @@ public class AuthenticationService
         SecurityToken token = tokenHandler.CreateToken(tokenDescriptor);
         return tokenHandler.WriteToken(token);
     }
-
 }
