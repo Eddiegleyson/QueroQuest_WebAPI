@@ -1,5 +1,7 @@
 
 using AutoMapper;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using QueroQuest.Aplication.DTOs;
 using QueroQuest.Aplication.Interfaces;
@@ -19,6 +21,7 @@ public class CategoriaController : ControllerBase
     }
 
     [HttpGet("Produtos")]
+    [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
     public async Task<ActionResult<IEnumerable<CategoriaDTO>>> GetCategoriaProdutos()
     {
         try
