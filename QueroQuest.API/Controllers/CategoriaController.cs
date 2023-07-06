@@ -128,4 +128,14 @@ public class CategoriaController : ControllerBase
         }
 
     }
+
+    [HttpGet("GetFuncionarios")]
+    [Authorize(Roles = "1")]
+    public async Task<ActionResult<dynamic>> GetFuncionarios()
+    {
+        return new 
+        {
+            perfil = "apenas funcionarios"
+        };
+    }
 }
