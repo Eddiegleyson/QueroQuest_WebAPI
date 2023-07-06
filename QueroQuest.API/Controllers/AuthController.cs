@@ -15,11 +15,10 @@ public class AuthController : ControllerBase
     }
 
     [HttpPost("GerarTokenUsuario")]
-    public async Task<ActionResult> Post([FromBody] UsuarioDTO usuarioDTO)
+    public async Task<ActionResult<dynamic>> Post([FromBody] UsuarioDTO usuarioDTO)
     {
         try
         {
-            /*FALTA CIRAR UM OBJETODTO QUE RETORNE USUARIO E TOKEN GERADO NA API*/
             if (usuarioDTO is null)
             {
                 return BadRequest("Payload not Found");
@@ -30,7 +29,11 @@ public class AuthController : ControllerBase
                 var toKenResult = _authService.GenerateJwtToken(usuarioDTO);
                 if (toKenResult is not null)
                 {
-                    return Ok(toKenResult);
+                    return new
+                    {
+                        user = usuarioDTO.Nome,
+                        token = toKenResult
+                    };
                 }
                 else
                 {
