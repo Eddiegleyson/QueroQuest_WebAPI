@@ -52,6 +52,19 @@ public class UsuarioService : IUsuarioService
         }
     }
 
+    public async Task<IEnumerable<UsuarioDTO>> GetAll()
+    {
+        try
+        {
+            var usariosEntity = _unitOfWork.UsuarioRepository.Get();
+            var usariosResultDTO = _mapper.Map<IEnumerable<UsuarioDTO>>(usariosEntity);
+            return usariosResultDTO;
+        }
+        catch (Exception ex)
+        {
+            throw new Exception(ex.Message);
+        }
+    }
 
     Task IUsuarioService.Update(UsuarioDTO usuarioDto)
     {

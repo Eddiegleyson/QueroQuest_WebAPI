@@ -11,5 +11,6 @@ namespace QueroQuest.Aplication.Interfaces
         Task<IEnumerable<UsuarioDTO>> GetByLogin(UsuarioDTO usuarioDto);
         Task <int> Add(UsuarioDTO usuarioDto);
         Task Update(UsuarioDTO usuarioDto);
+        Task<IEnumerable<UsuarioDTO>> GetAll();
     }
 }

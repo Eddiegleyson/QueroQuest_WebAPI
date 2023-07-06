@@ -9,7 +9,7 @@ using QueroQuest.Aplication.DTOs;
 public class UsuarioController : ControllerBase
 {
     private readonly IUsuarioService _usuarioService;
-    private readonly IAuthService    _authService;
+    private readonly IAuthService _authService;
 
     public UsuarioController(IUsuarioService usuarioService, IAuthService authService)
     {
@@ -17,11 +17,34 @@ public class UsuarioController : ControllerBase
         _authService = authService;
     }
 
-    [HttpPost]
+    [HttpGet("GetUsuarios")]
+    public async Task<ActionResult<IEnumerable<UsuarioDTO>>> Get()
+    {
+        try
+        {
+            var usuariosResultDTO = await _usuarioService.GetAll();
+            if (usuariosResultDTO is null)
+            {
+                return NotFound("Categoria não encontrada");
+            }
+            else
+            {
+                return Ok(usuariosResultDTO);
+            }
+        }
+        catch (Exception ex)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um error no sistema. ExceptionError: " + ex);
+        }
+    }
+
+
+    [HttpPost("CadastrarUsuarioToken")]
     public async Task<ActionResult> Post([FromBody] UsuarioDTO usuarioDTO)
     {
         try
         {
+            /*FALTA CIRAR UM OBJETODTO QUE RETORNE USUARIO E TOKEN GERADO NA API*/
             if (usuarioDTO is null)
             {
                 return BadRequest("Payload not Found");
@@ -34,25 +57,22 @@ public class UsuarioController : ControllerBase
                     var toKenResult = _authService.GenerateJwtToken(usuarioDTO);
                     if (toKenResult is not null)
                     {
-                        return Ok(toKenResult); 
+                        return Ok(toKenResult);
                     }
                     else
                     {
                         return BadRequest("Payload not Found");
-                    }  
-                    
+                    }
                 }
                 else
                 {
                     return BadRequest("Payload not Found");
                 }
-
             }
         }
         catch (Exception ex)
         {
-            return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um erro no sistema, ExceptionError: "+ex.StackTrace);
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um erro no sistema, ExceptionError: " + ex.StackTrace);
         }
-
     }
 }
