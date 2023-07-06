@@ -9,14 +9,16 @@ using QueroQuest.Aplication.DTOs;
 public class UsuarioController : ControllerBase
 {
     private readonly IUsuarioService _usuarioService;
+    private readonly IAuthService    _authService;
 
-    public UsuarioController(IUsuarioService usuarioService)
+    public UsuarioController(IUsuarioService usuarioService, IAuthService authService)
     {
         _usuarioService = usuarioService;
+        _authService = authService;
     }
 
     [HttpPost]
-    public async Task<ActionResult<int>> Post([FromBody] UsuarioDTO usuarioDTO)
+    public async Task<ActionResult> Post([FromBody] UsuarioDTO usuarioDTO)
     {
         try
         {
@@ -26,11 +28,25 @@ public class UsuarioController : ControllerBase
             }
             else
             {
-                int categoriaId = await _usuarioService.Add(usuarioDTO);
+                var usuarioResul = await _usuarioService.Add(usuarioDTO);
+                if (usuarioResul > 0)
+                {
+                    var toKenResult = _authService.GenerateJwtToken(usuarioDTO);
+                    if (toKenResult is not null)
+                    {
+                        return Ok(toKenResult); 
+                    }
+                    else
+                    {
+                        return BadRequest("Payload not Found");
+                    }  
+                    
+                }
+                else
+                {
+                    return BadRequest("Payload not Found");
+                }
 
-                return categoriaId;
-
-                /*Depois injetar a dependencia do serviço de geração de Token e retornar na criação do Usuario*/
             }
         }
         catch (Exception ex)

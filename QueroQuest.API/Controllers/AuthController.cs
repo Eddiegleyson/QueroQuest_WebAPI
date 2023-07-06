@@ -13,11 +13,11 @@ public class AuthController : ControllerBase
         _authService = authService;
     }
 
-    [HttpGet("AuthenticationAPI")]
-    public async Task<ActionResult> Get()
-    {
-        var result = _authService.GenerateJwtToken();
+    // [HttpGet("AuthenticationAPI")]
+    // public async Task<ActionResult> Get()
+    // {
+    //     var result = _authService.GenerateJwtToken();
 
-        return Ok(result);
-    }
+    //     return Ok(result);
+    // }
 }

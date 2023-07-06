@@ -5,6 +5,8 @@ using System.Text;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 using QueroQuest.Aplication.Interfaces;
+using QueroQuest.Aplication.DTOs;
+using System.Security.Claims;
 
 public class AuthService : IAuthService
 {
@@ -13,7 +15,7 @@ public class AuthService : IAuthService
     {
         _configuration = configuration;
     }
-    public string GenerateJwtToken()
+    public string GenerateJwtToken(UsuarioDTO usuarioDTO)
     {
         JwtSecurityTokenHandler tokenHandler = new JwtSecurityTokenHandler();
 
@@ -23,12 +25,12 @@ public class AuthService : IAuthService
         byte[] key = Encoding.ASCII.GetBytes(secretJwtKey);
         SecurityTokenDescriptor tokenDescriptor = new SecurityTokenDescriptor
         {
-            // Subject = new ClaimsIdentity(new Claim[]
-            // {
-            //     new Claim(ClaimTypes.Name, authenticateRequest.Login),
-            //     new Claim(ClaimTypes.NameIdentifier, userId),
-            //     new Claim(ClaimTypes.Role, "default")
-            // }),
+            Subject = new ClaimsIdentity(new Claim[]
+            {
+                new Claim(ClaimTypes.Name, usuarioDTO.Nome),
+                new Claim(ClaimTypes.NameIdentifier, usuarioDTO.Nome),
+                new Claim(ClaimTypes.Role, usuarioDTO.UsuarioPerfilId.ToString())
+            }),
             Expires = DateTime.UtcNow.AddMinutes(jwtExpirationTime),
             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
         };
