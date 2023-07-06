@@ -8,6 +8,11 @@ using System.IO;
 
 public class AppDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbContext>
     {
+        private IConfiguration _configuration;
+        public AppDbContextFactory(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
         public ApplicationDbContext CreateDbContext(string[] args)
         {
             IConfigurationRoot configuration = new ConfigurationBuilder()
@@ -19,7 +24,8 @@ public class AppDbContextFactory : IDesignTimeDbContextFactory<ApplicationDbCont
             var builder = new DbContextOptionsBuilder<ApplicationDbContext>();
             // cria a connection string. 
             // requer a connectionstring no appsettings.json
-            string mySqlConnection  = configuration.GetConnectionString("DefaultConnection");
+            string mySqlConnection  = _configuration.GetSection("ConnectionStrings").GetSection("DefaultConnection").Value;
+    
             builder.UseMySql(mySqlConnection, ServerVersion.AutoDetect(mySqlConnection));
 
             // Cria o contexto

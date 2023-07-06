@@ -1,0 +1,13 @@
+namespace QueroQuest.Aplication.DTOs;
+
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+
+public class UsuarioDTO
+{
+    public int Id { get; set; }
+    public string? Nome { get; set; }
+    public string? Senha { get; set; }
+    public bool FlAtivo { get; set; }
+    public int UsuarioPerfilId { get; set; }
+}
