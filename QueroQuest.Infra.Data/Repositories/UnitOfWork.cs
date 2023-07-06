@@ -1,6 +1,7 @@
 using QueroQuest.Aplication.Interfaces;
 using QueroQuest.Domain.Interfaces;
 using QueroQuest.Infra.Data.Context;
+using QueroQuest.Infra.Data.Repositories;
 
 namespace QueroQuest.Infra.Data.Repository;
 
@@ -8,6 +9,8 @@ public class UnitOfWork : IUnitOfWork
 {
     private ProdutoRepository _produtoRepo;
     private CategoriaRepository _categorisRepo;
+
+    private UsuarioRepository _usuarioRepo;
     public ApplicationDbContext _context;
     public UnitOfWork(ApplicationDbContext contexto)
     {
@@ -26,6 +29,14 @@ public class UnitOfWork : IUnitOfWork
         get
         {
             return _categorisRepo = _categorisRepo ?? new CategoriaRepository(_context);
+        }
+    }
+
+    public IUsuarioRepository UsuarioRepository
+    {
+        get 
+        {
+            return _usuarioRepo = _usuarioRepo ?? new UsuarioRepository(_context);
         }
     }
 
