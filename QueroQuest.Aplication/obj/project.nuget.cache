@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "pl4pV1PnTGNzRUZHwVWH7gESwmfqT4Oq63kFMuDBBJVKwespEq5p7BYxYiJ8egLJQgP8aT26JKYN7LdJTnzhHA==",
+  "dgSpecHash": "EE//Y+/9HDOkYNQEKCRBFMtAHQXq1GDBcav+UHQADb2Xhsal5rwdJIW5YSbfc8YHAxtboh5JKZ0Wl+2uj+T34w==",
   "success": true,
   "projectFilePath": "/Users/edgleysonalves/Documents/TI/project/source/POCs/QueroQuest_WebAPI/QueroQuest.Aplication/QueroQuest.Aplication.csproj",
   "expectedPackageFiles": [
@@ -17,16 +17,19 @@
     "/Users/edgleysonalves/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
     "/Users/edgleysonalves/.nuget/packages/microsoft.netcore.targets/1.1.0/microsoft.netcore.targets.1.1.0.nupkg.sha512",
     "/Users/edgleysonalves/.nuget/packages/microsoft.openapi/1.2.3/microsoft.openapi.1.2.3.nupkg.sha512",
+    "/Users/edgleysonalves/.nuget/packages/rabbitmq.client/6.5.0/rabbitmq.client.6.5.0.nupkg.sha512",
     "/Users/edgleysonalves/.nuget/packages/swashbuckle.aspnetcore/6.5.0/swashbuckle.aspnetcore.6.5.0.nupkg.sha512",
     "/Users/edgleysonalves/.nuget/packages/swashbuckle.aspnetcore.swagger/6.5.0/swashbuckle.aspnetcore.swagger.6.5.0.nupkg.sha512",
     "/Users/edgleysonalves/.nuget/packages/swashbuckle.aspnetcore.swaggergen/6.5.0/swashbuckle.aspnetcore.swaggergen.6.5.0.nupkg.sha512",
     "/Users/edgleysonalves/.nuget/packages/swashbuckle.aspnetcore.swaggerui/6.5.0/swashbuckle.aspnetcore.swaggerui.6.5.0.nupkg.sha512",
     "/Users/edgleysonalves/.nuget/packages/system.identitymodel.tokens.jwt/6.31.0/system.identitymodel.tokens.jwt.6.31.0.nupkg.sha512",
+    "/Users/edgleysonalves/.nuget/packages/system.memory/4.5.5/system.memory.4.5.5.nupkg.sha512",
     "/Users/edgleysonalves/.nuget/packages/system.runtime/4.3.0/system.runtime.4.3.0.nupkg.sha512",
     "/Users/edgleysonalves/.nuget/packages/system.security.cryptography.cng/4.5.0/system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "/Users/edgleysonalves/.nuget/packages/system.text.encoding/4.3.0/system.text.encoding.4.3.0.nupkg.sha512",
     "/Users/edgleysonalves/.nuget/packages/system.text.encodings.web/4.7.2/system.text.encodings.web.4.7.2.nupkg.sha512",
-    "/Users/edgleysonalves/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512"
+    "/Users/edgleysonalves/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512",
+    "/Users/edgleysonalves/.nuget/packages/system.threading.channels/7.0.0/system.threading.channels.7.0.0.nupkg.sha512"
   ],
   "logs": []
 }

@@ -1,0 +1,44 @@
+
+CREATE DATABASE ApiCatalogoDB_DEV;
+
+CREATE TABLE Categorias (
+    Id int NOT NULL AUTO_INCREMENT,
+    Nome varchar(255) NOT NULL,
+    ImagemUrl varchar(255),
+    PRIMARY KEY (Id)
+);
+
+
+CREATE TABLE Produtos (
+    Id int NOT NULL,
+    Nome varchar(100) NOT NULL,
+    Descricao varchar(250) NOT NULL,
+    Preco decimal(10,2)NOT NULL,
+    ImagemUrl varchar(250) NOT NULL,
+    Estoque int NOT NULL,
+    DataCadastro datetime(6) NOT NULL,
+    CategoriaId int,
+
+    PRIMARY KEY (Id),
+    FOREIGN KEY (CategoriaId) REFERENCES Categorias(Id) 
+);
+
+CREATE TABLE UsuarioPerfil(
+    Id int NOT NULL AUTO_INCREMENT,
+    Nome varchar(100) NOT NULL,
+    FlAtivo boolean DEFAULT true,
+    PRIMARY KEY (Id)
+);
+
+
+CREATE TABLE Usuarios(
+    Id int NOT NULL AUTO_INCREMENT,
+    Nome varchar(100) NOT NULL,
+    Senha varchar(10) NOT NULL,
+    FlAtivo boolean DEFAULT true,
+    UsuarioPerfilId int,
+
+    PRIMARY KEY (Id),
+    FOREIGN KEY (UsuarioPerfilId) REFERENCES UsuarioPerfil(Id) 
+);
+

@@ -10,6 +10,7 @@ using AutoMapper;
 using QueroQuest.Aplication.Mappings;
 using QueroQuest.Aplication.Interfaces;
 using QueroQuest.Aplication.Services;
+using QueroQuest.Aplication.Services.MessageBroker.Provider.RabbitMQ;
 
 public static class ServiceCollectionExtension
 {
@@ -28,6 +29,7 @@ public static class ServiceCollectionExtension
         services.AddTransient<IProdutoService, ProdutoService>();
         services.AddTransient<IAuthService, AuthService>();
         services.AddTransient<IUsuarioService, UsuarioService>();
+        services.AddTransient<IPublishService, PublishService>();
         
         var mappingConfig = new MapperConfiguration(c => { c.AddProfile(new MappingProfile()); });
         IMapper mapper = mappingConfig.CreateMapper();

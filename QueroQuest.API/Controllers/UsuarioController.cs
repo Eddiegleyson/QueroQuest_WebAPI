@@ -10,11 +10,15 @@ public class UsuarioController : ControllerBase
 {
     private readonly IUsuarioService _usuarioService;
     private readonly IAuthService _authService;
+    private readonly IPublishService _publishService;
 
-    public UsuarioController(IUsuarioService usuarioService, IAuthService authService)
+    public UsuarioController(IUsuarioService usuarioService
+                            ,IAuthService authService
+                            ,IPublishService publishService)
     {
         _usuarioService = usuarioService;
         _authService = authService;
+        _publishService = publishService;
     }
 
     [HttpGet("GetUsuarios")]
@@ -56,6 +60,7 @@ public class UsuarioController : ControllerBase
                     var toKenResult = _authService.GenerateJwtToken(usuarioDTO);
                     if (toKenResult is not null)
                     {
+                        _publishService.PublishMessage(toKenResult);
                         return new
                         {
                             user = usuarioDTO.Nome,
