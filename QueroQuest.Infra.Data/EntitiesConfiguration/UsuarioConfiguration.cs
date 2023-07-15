@@ -12,6 +12,8 @@ public class UserConfiguration : IEntityTypeConfiguration<Usuario>
         builder.Property(p => p.Nome).HasMaxLength(100).IsRequired();
         builder.Property(p => p.Senha).HasMaxLength(10).IsRequired();
         builder.Property(p => p.FlAtivo).HasDefaultValue(1).IsRequired();
+        builder.Property(p => p.Email).HasMaxLength(100).IsRequired();
+
 
         builder.HasOne(p => p.UsuarioPerfil).WithMany(e => e.Usuarios).HasForeignKey(e => e.UsuarioPerfilId);
     }

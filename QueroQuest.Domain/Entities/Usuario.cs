@@ -5,7 +5,8 @@ namespace QueroQuest.Domain.Entities
         public string? Nome { get; set; }
         public string? Senha { get; set; }
         public bool FlAtivo { get; set; }
+        public string Email { get; set; }
         public int UsuarioPerfilId { get; set; }
-        public UsuarioPerfil? UsuarioPerfil {get; set;}
+        public UsuarioPerfil? UsuarioPerfil { get; set; }
     }
 }

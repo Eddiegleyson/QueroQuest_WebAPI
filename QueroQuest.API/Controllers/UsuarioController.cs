@@ -60,7 +60,7 @@ public class UsuarioController : ControllerBase
                     var toKenResult = _authService.GenerateJwtToken(usuarioDTO);
                     if (toKenResult is not null)
                     {
-                        _publishService.PublishMessage(toKenResult);
+                        _publishService.PublishMessage(usuarioDTO.Email);
                         return new
                         {
                             user = usuarioDTO.Nome,

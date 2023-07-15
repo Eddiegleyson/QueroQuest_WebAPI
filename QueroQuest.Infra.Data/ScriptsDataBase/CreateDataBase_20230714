@@ -36,6 +36,7 @@ CREATE TABLE Usuarios(
     Nome varchar(100) NOT NULL,
     Senha varchar(10) NOT NULL,
     FlAtivo boolean DEFAULT true,
+    Email varchar(100) NOT NULL,
     UsuarioPerfilId int,
 
     PRIMARY KEY (Id),
