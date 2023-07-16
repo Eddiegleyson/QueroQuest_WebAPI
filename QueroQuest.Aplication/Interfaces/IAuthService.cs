@@ -1,13 +1,9 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using QueroQuest.Aplication.DTOs;
+namespace QueroQuest.Aplication.Interfaces;
 
-namespace QueroQuest.Aplication.Interfaces
+using QueroQuest.Aplication.DTOs;
+public interface IAuthService
 {
-    public interface IAuthService
-    {
-        public string GenerateJwtToken(UsuarioDTO usuarioDTO);
-    }
+    public string GenerateJwtToken(UsuarioDTO usuarioDTO);
+    public string Decrypt(string textValue);
+    string Encrypt(string textValue);
 }

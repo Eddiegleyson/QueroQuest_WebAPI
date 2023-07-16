@@ -81,6 +81,7 @@ public class UsuarioController : ControllerBase
             }
             else
             {
+                usuarioDTO.Senha = _authService.Encrypt(usuarioDTO.Senha);
                 var usuarioResul = await _usuarioService.Add(usuarioDTO);
                 if (usuarioResul > 0)
                 {
