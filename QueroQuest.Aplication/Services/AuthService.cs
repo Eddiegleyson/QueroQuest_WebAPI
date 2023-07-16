@@ -56,12 +56,8 @@ public class AuthService : IAuthService
         {
             string textToEncrypt = textValue;
             string ToReturn = "";
-            // string publickey = "12345678";
-            // string secretkey = "87654321";
-
             string publickey = "BlY9+e==";
             string secretkey = "==qcB0UB";
-
             byte[] secretkeyByte = { };
             secretkeyByte = System.Text.Encoding.UTF8.GetBytes(secretkey);
             byte[] publickeybyte = { };
