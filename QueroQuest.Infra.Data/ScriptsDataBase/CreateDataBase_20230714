@@ -33,7 +33,7 @@ CREATE TABLE UsuarioPerfil(
 
 CREATE TABLE Usuarios(
     Id int NOT NULL AUTO_INCREMENT,
-    Nome varchar(100) NOT NULL,
+    Login varchar(100) NOT NULL,
     Senha varchar(10) NOT NULL,
     FlAtivo boolean DEFAULT true,
     Email varchar(100) NOT NULL,

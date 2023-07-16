@@ -14,6 +14,6 @@ public class UsuarioRepository : Repository<Usuario>, IUsuarioRepository
 
     public async Task<IEnumerable<Usuario>> GetByLoginAsync(Usuario usuario)
     {
-        return  await Get().Where(w => w.Nome == usuario.Nome && w.Senha == usuario.Senha).ToListAsync();
+        return  await Get().Where(w => w.Login == usuario.Login && w.Senha == usuario.Senha).ToListAsync();
     }
 }

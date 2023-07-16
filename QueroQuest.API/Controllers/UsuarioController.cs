@@ -13,8 +13,8 @@ public class UsuarioController : ControllerBase
     private readonly IPublishService _publishService;
 
     public UsuarioController(IUsuarioService usuarioService
-                            ,IAuthService authService
-                            ,IPublishService publishService)
+                            , IAuthService authService
+                            , IPublishService publishService)
     {
         _usuarioService = usuarioService;
         _authService = authService;
@@ -29,7 +29,7 @@ public class UsuarioController : ControllerBase
             var usuariosResultDTO = await _usuarioService.GetAll();
             if (usuariosResultDTO is null)
             {
-                return NotFound("Categoria não encontrada");
+                return NotFound("Usuario não encontrada");
             }
             else
             {
@@ -42,6 +42,33 @@ public class UsuarioController : ControllerBase
         }
     }
 
+    [HttpPost("GetByLogin")]
+    public async Task<ActionResult<IEnumerable<UsuarioDTO>>> GetByLogin([FromBody] UsuarioDTO usuarioDTO)
+    {
+        try
+        {
+            if (usuarioDTO is null)
+            {
+                return BadRequest("Payload not Found");
+            }
+            else
+            {
+                var result = await _usuarioService.GetByLogin(usuarioDTO);
+                if (result.Count() > 0)
+                {
+                    return Ok(result);
+                }
+                else
+                {
+                    return NotFound("Error, Login ou Senha Invalidos, tente novamente!");
+                }
+            }
+        }
+        catch (System.Exception ex)
+        {
+            return StatusCode(StatusCodes.Status500InternalServerError, $"Ocorreu um error no sistema. ExceptionError: " + ex);
+        }
+    }
 
     [HttpPost("CadastrarUsuarioToken")]
     public async Task<ActionResult<dynamic>> Post([FromBody] UsuarioDTO usuarioDTO)
@@ -63,7 +90,7 @@ public class UsuarioController : ControllerBase
                         _publishService.PublishMessage(usuarioDTO.Email);
                         return new
                         {
-                            user = usuarioDTO.Nome,
+                            user = usuarioDTO.Login,
                             token = toKenResult
                         };
                     }

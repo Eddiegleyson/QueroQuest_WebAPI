@@ -9,7 +9,7 @@ public class UserConfiguration : IEntityTypeConfiguration<Usuario>
     public void Configure(EntityTypeBuilder<Usuario> builder)
     {
         builder.HasKey(t => t.Id);
-        builder.Property(p => p.Nome).HasMaxLength(100).IsRequired();
+        builder.Property(p => p.Login).HasMaxLength(100).IsRequired();
         builder.Property(p => p.Senha).HasMaxLength(10).IsRequired();
         builder.Property(p => p.FlAtivo).HasDefaultValue(1).IsRequired();
         builder.Property(p => p.Email).HasMaxLength(100).IsRequired();

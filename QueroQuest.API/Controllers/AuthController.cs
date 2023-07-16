@@ -31,7 +31,7 @@ public class AuthController : ControllerBase
                 {
                     return new
                     {
-                        user = usuarioDTO.Nome,
+                        user = usuarioDTO.Login,
                         token = toKenResult
                     };
                 }
